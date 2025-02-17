@@ -1,0 +1,88 @@
+<html>
+<head>
+    <title>Weekly Javascript Assignments</title>
+</head>
+
+<body>
+    <h1>Week 1</h1>
+
+    <h2>Calculator</h2>
+    <input type = 'number' id = 'num1' placeholder = 'Enter a number'>
+    <input type = 'number' id = 'num2' placeholder = 'Enter a number'>
+    <button onclick = 'adder()'>Add</button>
+    <button onclick = 'subtractor()'>Subtract</button>
+    <button onclick = 'multiplier()'>Multiply</button>
+    <button onclick = 'divider()'>Divide</button>
+    <button onclick = 'quotient()'>Quotient</button>
+    <button onclick = 'modulus()'>Modulus</button>
+    <button onclick = 'power()'>Power</button>
+    <p id = 'ans'></p>
+
+
+
+    <h2>Greeting</h2>
+    <input type = 'text' id = 'name' placeholder = 'Enter your name'>
+    <button onclick = 'greeting()'>Greet</button>
+    <p id = 'message'></p>
+
+    <script>
+        function adder(){
+            var num1 = document.getElementById('num1').value;
+            var num2 = document.getElementById('num2').value;
+            var ans = parseFloat(num1) + parseFloat(num2);
+            document.getElementById('ans').innerHTML = 'Ans: ' + ans;
+        }
+
+        function subtractor(){
+            var num1 = document.getElementById('num1').value;
+            var num2 = document.getElementById('num2').value;
+            var ans = parseFloat(num1) - parseFloat(num2);
+            document.getElementById('ans').innerHTML = 'Ans: ' + ans;
+        }
+
+        function multiplier(){
+            var num1 = document.getElementById('num1').value;
+            var num2 = document.getElementById('num2').value;
+            var ans = parseFloat(num1) * parseFloat(num2);
+            document.getElementById('ans').innerHTML = 'Ans: ' + ans;
+        }
+
+        function divider(){
+            var num1 = document.getElementById('num1').value;
+            var num2 = document.getElementById('num2').value;
+            var ans = parseFloat(num1) / parseFloat(num2);
+            document.getElementById('ans').innerHTML = 'Ans: ' + ans;
+        }
+
+        function quotient(){
+            var num1 = document.getElementById('num1').value;
+            var num2 = document.getElementById('num2').value;
+            var ans = (int)(parseFloat(num1) / parseFloat(num2));
+            document.getElementById('ans').innerHTML = 'Ans: ' + ans;
+        }
+
+        function modulus(){
+            var num1 = document.getElementById('num1').value;
+            var num2 = document.getElementById('num2').value;
+            var ans = parseFloat(num1) % parseFloat(num2);
+            document.getElementById('ans').innerHTML = 'Ans: ' + ans;
+        }
+
+        function power(){
+            var num1 = document.getElementById('num1').value;
+            var num2 = document.getElementById('num2').value;
+            var ans = Math.pow(parseFloat(num1), parseFloat(num2));
+            document.getElementById('ans').innerHTML = 'Ans: ' + ans;
+        }
+
+        function greeting(){
+            var name = document.getElementById('name').value;
+            document.getElementById('message').innerHTML = 'Hello ' + name + '!';
+        }
+
+
+    </script>
+</body>
+
+
+</html>
