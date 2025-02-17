@@ -26,6 +26,7 @@
     <p id = 'message'></p>
 
     <script>
+
         function adder(){
             var num1 = document.getElementById('num1').value;
             var num2 = document.getElementById('num2').value;
@@ -77,7 +78,12 @@
 
         function greeting(){
             var name = document.getElementById('name').value;
-            document.getElementById('message').innerHTML = 'Hello ' + name + '!';
+            if (name.trim()){
+                document.getElementById('message').innerHTML = 'Hello ' + name + '!';
+            }
+            else{
+                document.getElementById('message').innerHTML = 'You forgot to enter your name!';
+            }
         }
 
 
